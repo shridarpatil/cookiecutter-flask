@@ -1,0 +1,6 @@
+{
+    "host": "localhost",
+    "database": "bitcoin",
+    "password": "r00t",
+    "user": "root"
+}
