@@ -1,7 +1,7 @@
 #!/bin/python
 # -*- coding: utf-8 -*-
 
-"""{{{{cookiecutter.package}}}} Server."""
+"""{{cookiecutter.package}} Server."""
 import os
 
 from flask import Flask
