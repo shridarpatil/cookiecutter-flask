@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """Bitcoin Price Trigers."""
-from bitcoin.api.login.login import login
-from bitcoin.api.registration.registration import registration
+from {{cookiecutter.package}}.api.login.login import login
+from {{cookiecutter.package}}.api.registration.registration import registration
 
 
 def register_routes(app):

@@ -7,11 +7,11 @@ import pymysql
 from . import registration
 from flask import request
 
-from bitcoin.database.database import Database
-from bitcoin.utils.response import send_response
-from bitcoin.utils.exceptions import BadRequest
-from bitcoin.utils.exceptions import DuplicateEntry
-from bitcoin.utils.unique_id import get_uuid
+from {{cookiecutter.package}}.database.database import Database
+from {{cookiecutter.package}}.utils.response import send_response
+from {{cookiecutter.package}}.utils.exceptions import BadRequest
+from {{cookiecutter.package}}.utils.exceptions import DuplicateEntry
+from {{cookiecutter.package}}.utils.unique_id import get_uuid
 
 
 @registration.route('/registration', methods=['POST'])

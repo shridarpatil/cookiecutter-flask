@@ -2,10 +2,10 @@
 from . import login
 from flask import request
 
-from bitcoin.database.database import Database
-from bitcoin.utils.response import send_response
-from bitcoin.utils.exceptions import BadRequest
-from bitcoin.utils.exceptions import ResourceNotFound
+from {{cookiecutter.package}}.database.database import Database
+from {{cookiecutter.package}}.utils.response import send_response
+from {{cookiecutter.package}}.utils.exceptions import BadRequest
+from {{cookiecutter.package}}.utils.exceptions import ResourceNotFound
 
 
 @login.route('/login', methods=['GET'])

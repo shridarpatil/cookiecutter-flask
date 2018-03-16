@@ -3,16 +3,16 @@
 
 """Exceptions to be raised by every other sub-package"""
 
-__all__ = ['BitcoinBaseException', 'ResourceNotFound']
+__all__ = ['{{cookiecutter.package}}Exception', 'ResourceNotFound']
 
 
-class BitcoinBaseException(Exception):
+class {{cookiecutter.package}}BaseException(Exception):
     """Base exception for crux utils."""
 
     pass
 
 
-class ResourceNotFound(BitcoinBaseException):
+class ResourceNotFound({{cookiecutter.package}}BaseException):
     """Resource not found exception"""
 
     def __init__(
@@ -35,7 +35,7 @@ class ResourceNotFound(BitcoinBaseException):
         return response
 
 
-class DuplicateEntry(BitcoinBaseException):
+class DuplicateEntry({{cookiecutter.package}}BaseException):
     """Mysql DuplicateEntry Error"""
 
     def __init__(

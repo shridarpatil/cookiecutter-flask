@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """Generate token and update user token."""
-from bitcoin.database.database import Database
-from bitcoin.utils.exceptions import ServerError
-from bitcoin.utils.unique_id import get_uuid
+from {{cookiecutter.package}}.database.database import Database
+from {{cookiecutter.package}}.utils.exceptions import ServerError
+from {{cookiecutter.package}}.utils.unique_id import get_uuid
 from flask import request
 
 

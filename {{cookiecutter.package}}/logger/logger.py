@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 TAGS = ["bitcoin"]
-LOGGER_APP_NAME = {{cookiecutter.repo_name}}
+LOGGER_APP_NAME = {{cookiecutter.package}}
 # add extra field to logstash message
 DIR = 'logs'
 FILE_PATH = './{}/{}-logs-{}.log'.format(

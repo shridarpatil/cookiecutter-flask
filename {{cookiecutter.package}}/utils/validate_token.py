@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """Validate token."""
-from bitcoin.utils.exceptions import AccessDenied
-from bitcoin.database.database import Database
+from {{cookiecutter.package}}.utils.exceptions import AccessDenied
+from {{cookiecutter.package}}.database.database import Database
 
 
 def validate_token(token):
