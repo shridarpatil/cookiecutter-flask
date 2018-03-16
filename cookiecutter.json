@@ -6,5 +6,9 @@
   "email": "email@address.here",
   "url": "http://www.your.site/or/github/page",
   "license": "MIT",
-  "year": "2018"
+  "year": "2018",
+  "hostname": "localhost",
+  "dbname": "",
+  "password": "",
+  "user": ""
 }

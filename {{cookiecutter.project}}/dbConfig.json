@@ -1,0 +1,6 @@
+{
+    "host": "{{cookiecutter.hostname}}",
+    "database": "{{cookiecutter.dbname}}",
+    "password": "{{cookiecutter.password}}",
+    "user": "{{cookiecutter.user}}"
+}
