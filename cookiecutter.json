@@ -1,0 +1,10 @@
+{
+  "project": "My Flask App",
+  "package": "flaskboilerplate",
+  "description": "One-line description of the app",
+  "author": "Anonymous Author",
+  "email": "email@address.here",
+  "url": "http://www.your.site/or/github/page",
+  "license": "MIT",
+  "year": "2018"
+}
