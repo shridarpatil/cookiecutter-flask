@@ -1,24 +1,24 @@
 #!/bin/python
 # -*- coding: utf-8 -*-
 
-"""Bitcoin Price Trigers."""
+"""{{cookiecutter.repo_name}} Server."""
 import os
 
 from flask import Flask
 from flask import jsonify
 from flask import request
 
-from bitcoin.logger.logger import get_logger
-from bitcoin.utils.exceptions import BadRequest
-from bitcoin.utils.exceptions import ResourceNotFound
-from bitcoin.utils.exceptions import AccessDenied
-from bitcoin.utils.exceptions import ServerError
-from bitcoin.utils.exceptions import DuplicateEntry
+from {{cookiecutter.repo_name}}.logger.logger import get_logger
+from {{cookiecutter.repo_name}}.utils.exceptions import BadRequest
+from {{cookiecutter.repo_name}}.utils.exceptions import ResourceNotFound
+from {{cookiecutter.repo_name}}.utils.exceptions import AccessDenied
+from {{cookiecutter.repo_name}}.utils.exceptions import ServerError
+from {{cookiecutter.repo_name}}.utils.exceptions import DuplicateEntry
 
-from bitcoin.utils.log_client import LogClient
-from bitcoin.utils.register_route import register_routes
-from bitcoin.utils.validate_token import validate_token
-from bitcoin.utils.generate_token import generate_token
+from {{cookiecutter.repo_name}}.utils.log_client import LogClient
+from {{cookiecutter.repo_name}}.utils.register_route import register_routes
+from {{cookiecutter.repo_name}}.utils.validate_token import validate_token
+from {{cookiecutter.repo_name}}.utils.generate_token import generate_token
 
 
 logger = get_logger()
@@ -30,7 +30,7 @@ register_routes(app)
 
 @app.errorhandler(AccessDenied)
 def access_denied(error):
-    """Handle Error"""
+    """Handle Error."""
     response = jsonify(error.to_dict())
     response.status_code = error.status_code
     return response
@@ -38,7 +38,7 @@ def access_denied(error):
 
 @app.errorhandler(BadRequest)
 def bad_request(error):
-    """Handle Error"""
+    """Handle Error."""
     response = jsonify(error.to_dict())
     response.status_code = error.status_code
     return response
@@ -46,7 +46,7 @@ def bad_request(error):
 
 @app.errorhandler(ResourceNotFound)
 def resource_not_found(error):
-    """Handle Error"""
+    """Handle Error."""
     response = jsonify(error.to_dict())
     response.status_code = error.status_code
     return response
@@ -54,7 +54,7 @@ def resource_not_found(error):
 
 @app.errorhandler(DuplicateEntry)
 def duplicate_entry(error):
-    """Handle Error"""
+    """Handle Error."""
     response = jsonify(error.to_dict())
     response.status_code = error.status_code
     return response
@@ -62,7 +62,7 @@ def duplicate_entry(error):
 
 @app.errorhandler(404)
 def page_not_found(error):
-    """Handle 404 error"""
+    """Handle 404 error."""
     return jsonify({
         'message': 'This page does not exist',
         'status': 'Error',
@@ -73,7 +73,7 @@ def page_not_found(error):
 
 @app.errorhandler(405)
 def method_not_allowed(error):
-    """Handle 404 error"""
+    """Handle 404 error."""
     return jsonify({
         'message': 'Method Not Allowed',
         'status': 'Error',
@@ -84,7 +84,7 @@ def method_not_allowed(error):
 
 @app.errorhandler(ServerError)
 def server_error(error):
-    """Handle 404 error"""
+    """Handle 404 error."""
     return jsonify({
         'message': 'Server Error',
         'status': 'Error',
@@ -95,7 +95,7 @@ def server_error(error):
 
 @app.before_request
 def before_request():
-    """Log client Details"""
+    """Log client Details."""
     LogClient(request)
     try:
         endpoint = request.endpoint
@@ -111,7 +111,7 @@ def before_request():
 
 @app.after_request
 def after_request(response):
-    """Add token to response headers"""
+    """Add token to response headers."""
     status = response.status
     if status[0] == '2':
         # new_token = generate_token()
