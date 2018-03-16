@@ -1,19 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Exceptions to be raised by every other sub-package"""
+"""Exceptions to be raised by every other sub-package."""
 
-__all__ = ['{{cookiecutter.package}}Exception', 'ResourceNotFound']
+__all__ = ['BaseException', 'ResourceNotFound']
 
 
-class {{cookiecutter.package}}BaseException(Exception):
+class BaseException(Exception):
     """Base exception for crux utils."""
 
     pass
 
 
-class ResourceNotFound({{cookiecutter.package}}BaseException):
-    """Resource not found exception"""
+class ResourceNotFound(BaseException):
+    """Resource not found exception."""
 
     def __init__(
         self, message='Resource Not Found', status_code=404, payload=None
@@ -35,8 +35,8 @@ class ResourceNotFound({{cookiecutter.package}}BaseException):
         return response
 
 
-class DuplicateEntry({{cookiecutter.package}}BaseException):
-    """Mysql DuplicateEntry Error"""
+class DuplicateEntry(BaseException):
+    """Mysql DuplicateEntry Error."""
 
     def __init__(
         self, message='Duplicate Entry', status_code=409, payload=None
@@ -58,7 +58,7 @@ class DuplicateEntry({{cookiecutter.package}}BaseException):
         return response
 
 
-class BadRequest(Exception):
+class BadRequest(BaseException):
     """Invalid Usage."""
 
     def __init__(
@@ -81,7 +81,7 @@ class BadRequest(Exception):
         return response
 
 
-class AccessDenied(Exception):
+class AccessDenied(BaseException):
     """Invalid Usage."""
 
     def __init__(
@@ -104,7 +104,7 @@ class AccessDenied(Exception):
         return response
 
 
-class ServerError(Exception):
+class ServerError(BaseException):
     """Invalid Usage."""
 
     def __init__(
