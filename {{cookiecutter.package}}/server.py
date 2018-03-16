@@ -8,17 +8,17 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 
-from {{{{cookiecutter.package}}}}.logger.logger import get_logger
-from {{{{cookiecutter.package}}}}.utils.exceptions import BadRequest
-from {{{{cookiecutter.package}}}}.utils.exceptions import ResourceNotFound
-from {{{{cookiecutter.package}}}}.utils.exceptions import AccessDenied
-from {{{{cookiecutter.package}}}}.utils.exceptions import ServerError
-from {{{{cookiecutter.package}}}}.utils.exceptions import DuplicateEntry
+from {{cookiecutter.package}}.logger.logger import get_logger
+from {{cookiecutter.package}}.utils.exceptions import BadRequest
+from {{cookiecutter.package}}.utils.exceptions import ResourceNotFound
+from {{cookiecutter.package}}.utils.exceptions import AccessDenied
+from {{cookiecutter.package}}.utils.exceptions import ServerError
+from {{cookiecutter.package}}.utils.exceptions import DuplicateEntry
 
-from {{{{cookiecutter.package}}}}.utils.log_client import LogClient
-from {{{{cookiecutter.package}}}}.utils.register_route import register_routes
-from {{{{cookiecutter.package}}}}.utils.validate_token import validate_token
-from {{{{cookiecutter.package}}}}.utils.generate_token import generate_token
+from {{cookiecutter.package}}.utils.log_client import LogClient
+from {{cookiecutter.package}}.utils.register_route import register_routes
+from {{cookiecutter.package}}.utils.validate_token import validate_token
+from {{cookiecutter.package}}.utils.generate_token import generate_token
 
 
 logger = get_logger()
